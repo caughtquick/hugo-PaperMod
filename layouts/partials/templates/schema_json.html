@@ -81,8 +81,6 @@
     {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
     {{- end}}
   {{- end -}}
-  "datePublished": {{ .PublishDate }},
-  "dateModified": {{ .Lastmod }},
   {{- with (.Params.author | default site.Params.author) }}
   "author":
     {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
